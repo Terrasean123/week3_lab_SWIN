@@ -23,27 +23,27 @@
             <fieldset>
                 <legend> Student details </legend>
                 <label for = "student ID"> Student ID:</label>
-                <input type = "text" id = "student ID" student ID = "student ID" required>
+                <input type = "text" id = "student ID" student ID = "student ID" required pattern=".{7,10}">
                 <br>
                     <label for = "given name "> Given Name:</label>
-                    <input type= "text" id= "given name" name ="Given Name"  required>
+                    <input type= "text" id= "given name" name ="Given Name"  required maxlength="15" pattern="[a-z,A-Z]{0,}">
                     <label for = "family name "> Family Name:</label>
-                    <input type= "text" id= "family name " name ="Family Name"  required>
+                    <input type= "text" id= "family name " name ="Family Name"  required maxlength="15" pattern="[a-z,A-Z]{0,}">
                 <br>
             </fieldset>
             <fieldset>
                 <legend>Your Unit</legend>
                 <label for = "Unit ID COS10011 "> COS10011 </label>
-                <input type="radio" name= "Unit ID COS10011">
+                <input type="radio" name= "Unit ID">
                 <label for = "Unit ID COS60004"> COS60004 </label>
-                <input type="radio" name= "Unit ID COS60004">
+                <input type="radio" name= "Unit ID">
                 <label for = "Unit ID COS60007 "> COS60007 </label>
-                <input type="radio" name= "Unit ID COS60007">
+                <input type="radio" name= "Unit ID">
                 <br>
                     <label for="your tutor"> Your Tutor </label>
         
-                    <select name="tutor select" id="tutor select">
-                        
+                    <select name="tutor select" id="tutor select" required>
+                    
                         <option value="tutor 0">Please Select</option>
                         <option value="tutor 1">Mrs. Pushpita</option>
                         <option value="tutor 2">Ms. Leochra</option>
@@ -56,21 +56,26 @@
             <fieldset>
                 <legend>Issue</legend>
                 <label for="HTML checkbox"> HTML</label>
-                <input type="checkbox" name = "HTML checkbox">
+                <input type="checkbox" name = "HTML checkbox" checked>
                 <label for="JavaScript checkbox"> JavaScript</label>
                 <input type="checkbox" name = "JavaScript checkbox">
                 <label for="PHP checkbox"> PHP</label>
                 <input type="checkbox" name = "PHP checkbox">
                 <label for="MySQL checkbox"> MySQL</label>
                 <input type="checkbox" name = "MySQL checkbox">
-                
+                <br>
+                <label for="Desc of Issue ">Description of Issue</label>
+                <br>
+                <textarea name="Description of Issue" id="Desc of Issue" placeholder="Write description of Issue here..."></textarea>
             </fieldset>
             <fieldset>
-                <legend> preferred Date/Time</legend>
+                <legend> Preferred Date/Time</legend>
+                <input type="text" name = "Date" pattern="^\d{1,2}\/\d{1,2}\/\d{4}$" required = "required" placeholder="00/00/0000">
+                <input type="text" name = "Time" pattern ="^\d{2}:\d{2}$" required = "required" placeholder="00:00">
                 
             </fieldset>
             <input type= "submit" value = "Book">
-            <input type= "submit" value = "Reset Form">
+            <input type= "reset" value = "Reset Form">
             
         </form>
     </body>
