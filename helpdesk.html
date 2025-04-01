@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta aria-describedby=" somethin "  >
-    <title>CWA Help Desk Appointment</title>
-    
-</head>
-<fieldset>
-    <header>
-        <a href="https://www.swinburne.edu.au/"><img src="./logo.png" alt="swinburne logo"> </a>
-        <h1>CWA Help Desk Appointment </h1>
-    </header>
-    <body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta aria-describedby=" somethin "  > -->
+        <title>CWA Help Desk Appointment</title>
+        
+    </head>
+   
+    <body> 
+        <header>
+            <a href="https://www.swinburne.edu.au/"><img src="./logo.png" alt="swinburne logo"> </a>
+            <h1>CWA Help Desk Appointment </h1>
+        </header>
         <p>
             The Help Desk located in ATC620.Open 10.30 to 19:00 Monday  to Friday
             <br> 
@@ -22,32 +22,31 @@
         <form action = "submit.php" method ="post">
             <fieldset>
                 <legend> Student details </legend>
-                <label for = "student ID"> Student ID:</label>
-                <input type = "text" id = "student ID" student ID = "student ID" required pattern=".{7,10}">
+                <label for = "student_ID"> Student ID:</label>
+                <input type = "text" id = "student_ID" required pattern=".{7,10}">
                 <br>
-                    <label for = "given name "> Given Name:</label>
-                    <input type= "text" id= "given name" name ="Given Name"  required maxlength="15" pattern="[a-z,A-Z]{0,}">
-                    <label for = "family name "> Family Name:</label>
-                    <input type= "text" id= "family name " name ="Family Name"  required maxlength="15" pattern="[a-z,A-Z]{0,}">
+                    <label for = "given_name"> Given Name:</label>
+                    <input type= "text" id= "given_name" name ="Given Name"  required maxlength="15" pattern="[a-z,A-Z]{0,}">
+                    <label for = "family_name"> Family Name:</label>
+                    <input type= "text" id= "family_name" name ="Family Name"  required maxlength="15" pattern="[a-z,A-Z]{0,}">
                 <br>
             </fieldset>
             <fieldset>
                 <legend>Your Unit</legend>
-                <label for = "Unit ID COS10011 "> COS10011 </label>
-                <input type="radio" name= "Unit ID">
-                <label for = "Unit ID COS60004"> COS60004 </label>
-                <input type="radio" name= "Unit ID">
-                <label for = "Unit ID COS60007 "> COS60007 </label>
-                <input type="radio" name= "Unit ID">
+                <label for = "Unit_ID1"> COS10011 </label>
+                <input type="radio" name= "Unit_ID" id= "Unit_ID1">
+                <label for = "Unit_ID2"> COS60004 </label>
+                <input type="radio" name= "Unit_ID" id= "Unit_ID2">
+                <label for = "Unit_ID3"> COS60007 </label>
+                <input type="radio" name= "Unit_ID" id= "Unit_ID3">
                 <br>
-                    <label for="your tutor"> Your Tutor </label>
-        
-                    <select name="tutor select" id="tutor select" required>
+                    <label for="tutor_select"> Your Tutor </label>
+                    <select name="tutor select" id="tutor_select" required>
                     
-                        <option value="tutor 0">Please Select</option>
-                        <option value="tutor 1">Mrs. Pushpita</option>
-                        <option value="tutor 2">Ms. Leochra</option>
-                        <option value="tutor 3">Mr. Sword</option>
+                        <option value>Please Select</option>
+                        <option>Mrs. Pushpita</option>
+                        <option>Ms. Leochra</option>
+                        <option>Mr. Sword</option>
                     </select>
 
                 <br>
@@ -55,18 +54,18 @@
             </fieldset>
             <fieldset>
                 <legend>Issue</legend>
-                <label for="HTML checkbox"> HTML</label>
-                <input type="checkbox" name = "HTML checkbox" checked>
-                <label for="JavaScript checkbox"> JavaScript</label>
-                <input type="checkbox" name = "JavaScript checkbox">
-                <label for="PHP checkbox"> PHP</label>
-                <input type="checkbox" name = "PHP checkbox">
-                <label for="MySQL checkbox"> MySQL</label>
-                <input type="checkbox" name = "MySQL checkbox">
+                <label for="HTML_Checkbox"> HTML</label>
+                <input type="checkbox" name = "HTML_Checkbox" checked id = "HTML_Checkbox" >
+                <label for="JavaScript_Checkbox"> JavaScript</label>
+                <input type="checkbox" name = "JavaScript_Checkbox" id = "JavaScript_Checkbox">
+                <label for="PHP_Checkbox"> PHP</label>
+                <input type="checkbox" name = "PHP_Checkbox" id = "PHP_Checkbox">
+                <label for="MySQL_Checkbox"> MySQL</label>
+                <input type="checkbox" name = "MySQL_Checkbox" id = "MySQL_Checkbox">
                 <br>
-                <label for="Desc of Issue ">Description of Issue</label>
+                <label for="Desc_of_Issue">Description of Issue</label>
                 <br>
-                <textarea name="Description of Issue" id="Desc of Issue" placeholder="Write description of Issue here..."></textarea>
+                <textarea name="Description of Issue" id="Desc_of_Issue" placeholder="Write description of Issue here..."></textarea>
             </fieldset>
             <fieldset>
                 <legend> Preferred Date/Time</legend>
@@ -79,5 +78,4 @@
             
         </form>
     </body>
-</fieldset>
 </html>
